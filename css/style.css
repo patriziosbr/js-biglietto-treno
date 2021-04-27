@@ -4,7 +4,28 @@
     box-sizing: border-box;
 }
 body {
+    font-family: sans-serif;
     background-color: #c3c5c9;
+}
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 32;
+    font-style: italic;
+    font-weight: 500;
+}
+.wrapper {
+    background-color: bisque;
+    height: 100vh;
+    padding: 24px;
+}
+#img_wrap {
+    height: 50%;
+    position: relative;
+}
+#img_wrap img {
+    height: 100%;
 }
 
 @media all and ( min-width: 756px) { 
