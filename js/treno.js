@@ -29,8 +29,8 @@ if ( eta <= 18 ) {
     var priceOld = "Prezzo ticket scontato del 40% " + Math.round((priceOver + Number.EPSILON) * 100) / 100 + "€";
     document.getElementById('price').innerHTML = priceOld
 } else {
-    var defSimple = Math.round((prezzoBase + Number.EPSILON) * 100) / 100
-    var priceDefault = "Prezzo ticket " + defSimple + "€";
+    var defultSimple = Math.round((prezzoBase + Number.EPSILON) * 100) / 100
+    var priceDefault = "Prezzo ticket " + defultSimple + "€";
     document.getElementById('price').innerHTML = priceDefault
 }
 
