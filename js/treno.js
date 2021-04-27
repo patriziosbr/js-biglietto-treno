@@ -21,14 +21,16 @@ var prezzoBase = chilometri * 0.21;
 if ( eta <= 18 ) {
     var scontoVenti = (prezzoBase * 20) / 100;
     var priceUnder = prezzoBase - scontoVenti;
-    var priceKid =  "Prezzo ticket " + Math.round((priceUnder + Number.EPSILON) * 100 ) / 100 + "€" ;
+    var priceKid =  "Prezzo ticket scontato del 20% " + Math.round((priceUnder + Number.EPSILON) * 100 ) / 100 + "€" ;
     document.getElementById('price').innerHTML = priceKid
 } else if  ( eta >= 65 ) {
     var scontoQuaranta = (prezzoBase * 40) / 100; 
     var priceOver = prezzoBase - scontoQuaranta;
-    console.log( "Prezzo ticket " + Math.round((priceOver + Number.EPSILON) * 100) / 100 + "€" );
+    var priceOld = "Prezzo ticket scontato del 40% " + Math.round((priceOver + Number.EPSILON) * 100) / 100 + "€";
+    document.getElementById('price').innerHTML = priceOld
 } else {
-    console.log( "Prezzo ticket " + prezzoBase + "€");
+    var priceDefault = "Prezzo ticket " + prezzoBase + "€";
+    document.getElementById('price').innerHTML = priceDefault
 }
 
 
