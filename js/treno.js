@@ -8,11 +8,14 @@
 // prompt km da percorrere
 var inputKm = prompt('chilometri da percorrere');
 var chilometri = parseInt(inputKm);
+document.getElementById('fare').innerHTML = chilometri;
 // console.log(chilometri); ok
 
 // prompt eta passegero
 var inputEta = prompt('età passegero');
 var eta = parseInt(inputEta);
+document.getElementById('age').innerHTML = eta;
+
 
 // prezzo km 0.21
 var prezzoBase = chilometri * 0.21;
@@ -21,17 +24,20 @@ var prezzoBase = chilometri * 0.21;
 if ( eta <= 18 ) {
     var scontoVenti = (prezzoBase * 20) / 100;
     var priceUnder = prezzoBase - scontoVenti;
-    var priceKid =  "Prezzo ticket scontato del 20% " + Math.round((priceUnder + Number.EPSILON) * 100 ) / 100 + "€" ;
-    document.getElementById('price').innerHTML = priceKid
+    var priceKid =  " scontato del 20% " + Math.round((priceUnder + Number.EPSILON) * 100 ) / 100 + "€" ;
+    document.getElementById('price').innerHTML = priceKid;
+    document.getElementById('kid').style.display = 'block';
 } else if  ( eta >= 65 ) {
     var scontoQuaranta = (prezzoBase * 40) / 100; 
     var priceOver = prezzoBase - scontoQuaranta;
-    var priceOld = "Prezzo ticket scontato del 40% " + Math.round((priceOver + Number.EPSILON) * 100) / 100 + "€";
-    document.getElementById('price').innerHTML = priceOld
+    var priceOld = " scontato del 40% " + Math.round((priceOver + Number.EPSILON) * 100) / 100 + "€";
+    document.getElementById('price').innerHTML = priceOld;
+    document.getElementById('senior').style.display = 'block';
 } else {
     var defultSimple = Math.round((prezzoBase + Number.EPSILON) * 100) / 100
-    var priceDefault = "Prezzo ticket " + defultSimple + "€";
+    var priceDefault = " " + defultSimple + "€";
     document.getElementById('price').innerHTML = priceDefault
+    document.getElementById('adult').style.display = 'block';
 }
 
 

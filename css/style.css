@@ -16,6 +16,9 @@ h2 {
     text-transform: uppercase;
     font-weight: 500;
 }
+h3 {
+    margin-bottom: 16px;
+}
 .wrapper {
     background-color: bisque;
     height: 100vh;
@@ -40,14 +43,20 @@ h2 {
     text-transform: uppercase;
 
 }
-.kid {
+#kid {
+    display: none;
     background-color: green;
 }
-.adult {
-    background-color: yellow;
+#adult {
+    display: none;
+    background-color: rgb(190, 140, 0);
 }
-.senior {
+#senior {
+    display: none;
     background-color: brown;
+}
+.info p{
+    margin-bottom: 8px;
 }
 
 @media all and ( min-width: 756px) { 
