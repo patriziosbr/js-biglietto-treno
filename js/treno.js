@@ -21,7 +21,7 @@ document.getElementById('age').innerHTML = eta;
 var prezzoBase = chilometri * 0.21;
 // console.log("prezzo base " + prezzoBase); ok
 
-if ( eta <= 18 ) {
+if ( eta < 18 ) {
     var scontoVenti = (prezzoBase * 20) / 100;
     var priceUnder = prezzoBase - scontoVenti;
     var priceKid =  " scontato del 20% " + Math.round((priceUnder + Number.EPSILON) * 100 ) / 100 + "€" ;
